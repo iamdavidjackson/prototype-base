@@ -1,12 +1,12 @@
 define([
         'jquery',
         'lodash',
-        'modules/eebase-module'
+        'base-base'
     ],
     function(
         $,
         _,
-        EEBaseModule
+        BaseBase
     ) {
         'use strict';
 
@@ -17,11 +17,11 @@ define([
         *   site doesn't explode in IE.
         *
         *   @class BreakpointsController
-        *   @extends EEBaseModule
+        *   @extends BaseBase
         *   @constructor
         */
         var BreakpointsController = function(breakpoints) {
-            EEBaseModule.call(this);
+            BaseBase.call(this);
 
             this.breakpoints = breakpoints;
 
@@ -33,7 +33,7 @@ define([
             this.isInit = true;
         };
 
-        BreakpointsController.prototype = _.create(EEBaseModule.prototype, {
+        BreakpointsController.prototype = _.create(BaseBase.prototype, {
             constructor: BreakpointsController,
 
             /**
